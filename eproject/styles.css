@@ -205,7 +205,7 @@ body {
 
 .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 230px;
     display: block;
     border-radius: 8px;
     transition: transform 0.3s, box-shadow 0.3s;
