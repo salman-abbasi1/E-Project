@@ -9,41 +9,70 @@
 <body>
 
 <header>
-    <!-- Navbar -->
     <nav class="home-nav">
-        <div class="main-logo"><a href="index.html">BAG BAG
-        <span class="main-logo2">-Your everyday carry-</span></a>
+
+        <div class="main-logo">
+            <a href="index.html">BAG BAG
+                <span class="main-logo2">-Your everyday carry-</span>
+            </a>
         </div>
-    <!-- Navlinks -->
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+
+        <!-- Hamburger Button (for mobile) -->
+        <div id="hamburger">☰</div>
+
+        <!-- Nav Links Wrapper -->
+        <ul id="navLinks" class="nav-links">
+
+            <!-- Dropdown -->
             <li class="dropdown">
-                <a href="#" class="dropbtn">More ▼</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Men</a></li>
-                    <li><a href="#">Women</a></li>
+                <a href="#">Collection</a>
+
+                <ul class="dropdown-menu">
+
+                    <!-- MEN submenu -->
+                    <li class="sub-dropdown">
+                        <a href="#">Women ▸</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Women Hand-bags</a></li>
+                            <li><a href="#">Women Backpacks</a></li>
+                            <li><a href="#">Women Tote bags</a></li>
+                            <li><a href="#">Women Sling bags</a></li>
+                            <li><a href="#">Clutches</a></li>
+                            <li><a href="#">All</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- WOMEN submenu -->
+                    <li class="sub-dropdown">
+                        <a href="#">Women ▸</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Women Handbags</a></li>
+                            <li><a href="#">Women Clutches</a></li>
+                            <li><a href="#">Women Shoulder Bags</a></li>
+                        </ul>
+                    </li>
+
                 </ul>
             </li>
-            <li><a href="#">Feedback</a></li>
-            <li><a href="#">Contact Us</a></li>
+
         </ul>
-            <div class="search-bar">
-            <input type="text" placeholder="Search Bag">
-            <button>Search</button>
-        </div>
+        <li><a href="">Contact us</a></li>
+        <li><a href="">Feedback</a></li>
+        <li><a href="">Gallery</a></li>
+        <li><a href="">Queries</a></li>
     </nav>
 </header>
-<!-- X--------------------------------X -->
+
 <!-- Categories Section -->
- <h2>Shop by Categories</h2>
-<section class="gallery">
-    <div class="gallery-item"><img src="backpack.jpg" alt="Bag 1"></div>
-    <div class="gallery-item"><img src="tote-bag.jpg" alt="Bag 2"></div>
-    <div class="gallery-item"><img src="laptop bag.avif" alt="Bag 3"></div>
-    <div class="gallery-item"><img src="purse.avif" alt="Bag 4"></div>
-    <div class="gallery-item"><img src="clutch bags.jpg" alt="Bag 5"></div>
-    <div class="gallery-item"><img src="travel-bag.webp" alt="Bag 6"></div>
+<h2 class="categories">Shop by Categories</h2>
+
+<section class="category-container">
+    <div class="category-box"><img src="backpack.jpg" alt="Bag 1"></div>
+    <div class="category-box"><img src="tote-bag.jpg" alt="Bag 2"></div>
+    <div class="category-box"><img src="laptop bag.avif" alt="Bag 3"></div>
+    <div class="category-box"><img src="purse.avif" alt="Bag 4"></div>
+    <div class="category-box"><img src="clutch bags.jpg" alt="Bag 5"></div>
+    <div class="category-box"><img src="travel-bag.webp" alt="Bag 6"></div>
 </section>
 
 <script>
@@ -60,7 +89,7 @@ hamburger.addEventListener('click', () => {
 dropdown.addEventListener('click', (e) => {
     if(window.innerWidth <= 768) {
         e.preventDefault();
-        dropdown.classList.toggle('active');
+        dropdown.classList.toggle('open');
     }
 });
 
@@ -68,7 +97,7 @@ dropdown.addEventListener('click', (e) => {
 document.addEventListener('click', (e) => {
     if(!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
         navLinks.classList.remove('active');
-        dropdown.classList.remove('active');
+        dropdown.classList.remove('open');
     }
 });
 </script>

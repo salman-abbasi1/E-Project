@@ -40,54 +40,6 @@ body {
     text-decoration: none;
     color: white;
 }
-/* Search bar container */
-.search-bar {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-left: 20px;
-}
-
-.search-bar input {
-    padding: 8px 12px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 220px;
-    font-size: 15px;
-}
-
-.search-bar button {
-    padding: 8px 14px;
-    border: none;
-    background: #ffae00;
-    color: black;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.search-bar button:hover {
-    background: #ffcc40;
-}
-
-/* Responsive: search bar moves below nav links */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .search-bar {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .search-bar input {
-        width: 100%;
-    }
-}
-
 /* NORMAL NAV LINKS */
 .nav-links {
     display: flex;
@@ -105,95 +57,59 @@ body {
     border-bottom: 3px solid white;
     transition: ease 100ms;
 }
+/* ------------------------------ */
+/* DESKTOP DROPDOWN FIXED POSITION */
+/* ------------------------------ */
 
-/* DROPDOWN */
+/* Make dropdown relative to the parent <li> */
 .dropdown {
     position: relative;
 }
-.dropdown a{
-    text-decoration: none;
-    color: white;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: gray;
-    min-width: 120px;
-    flex-direction: column;
-    z-index: 1000;
-}
 
-.dropdown-content li {
-    text-align: center;
-    padding: 10px 0;
+/* Dropdown menu appears exactly under the button */
+.dropdown-menu {
     list-style: none;
-}
-
-.dropdown-content li a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Desktop hover */
-@media(min-width: 769px){
-    .dropdown:hover .dropdown-content {
-        display: flex;
-    }
-}
-
-/* HAMBURGER BUTTON */
-.hamburger {
-    font-size: 35px;
-    color: white;
+    background: #444;
+    position: absolute;
+    top: 100%;         /* directly below Categories */
+    left: 0;           /* aligned properly */
     display: none;
-    cursor: pointer;
+    min-width: 180px;
+    border-radius: 5px;
+    z-index: 20;
 }
 
-/* MOBILE STYLES */
-@media(max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 75px;
-        right: 0;
-        width: 100%;
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px 0;
-        background-color: gray;
-        display: none;
-        text-align: center;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    /* Dropdown inside mobile menu */
-    .dropdown-content {
-        position: static;
-        display: none;
-    }
-    .dropdown.active .dropdown-content {
-        display: flex;
-        flex-direction: column;
-    }
+/* On hover show dropdown */
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
-/* Cursor pointer for dropdown */
-.dropbtn {
-    cursor: pointer;
+/* ---------- Submenu (Men/Women) ---------- */
+.sub-dropdown {
+    position: relative;
+    padding-left: 10px;
 }
+
+.sub-menu {
+    list-style: none;
+    background: #666;
+    position: absolute;
+    top: 0;
+    left: 100%;       /* submenu appears to the right */
+    display: none;
+    min-width: 180px;
+    padding-left: 10px;
+}
+
+.sub-dropdown:hover .sub-menu {
+    display: block;
+}
+
 /* ----------------------------- */
 /* ----------------------------- */
 /* Gallery Section */
 /* ----------------------------- */
-.gallery {
+.category-container {
     display: grid;
     gap: 20px;
     padding: 30px;
@@ -202,10 +118,7 @@ body {
     /* Default for desktop */
     grid-template-columns: repeat(3, 1fr);
 }
-h2{
-    color: white;
-}
-.gallery-item img {
+.category-box img {
     width: 100%;
     height: 230px;
     display: block;
@@ -213,21 +126,21 @@ h2{
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.gallery-item img:hover {
+.category-box img:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(255,255,255,0.3);
 }
 
 /* Tablet: 2 columns */
 @media (max-width: 992px) {
-    .gallery {
+    .category-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* Mobile: 1 column */
 @media (max-width: 768px) {
-    .gallery {
+    .category-container {
         grid-template-columns: 1fr;
         padding: 20px;
     }
