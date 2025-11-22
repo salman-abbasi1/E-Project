@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +10,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* NAVBAR */
+/* --------- Navbar --------- */
 .home-nav {
     width: 100%;
     height: 75px;
@@ -17,88 +18,82 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    position: relative;
 }
-/* LOGO */
-.main-logo {
+
+/* Logo */
+.main-logo a {
+    text-decoration: none;
+    color: white;
     font-size: 30px;
     font-weight: bold;
-    color: white;
 }
-.main-logo a{
-    text-decoration: none;
-    color: white;
-}
-.main-logo2{
-    display: flex;
-    justify-content: center;
+
+.sub-logo {
+    display: block;
     font-size: 15px;
     font-style: italic;
-    color: white;
 }
-.main-logo2 a{
-    text-decoration: none;
-    color: white;
-}
-/* NORMAL NAV LINKS */
+
+/* Nav Links */
 .nav-links {
     display: flex;
     list-style: none;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
     text-decoration: none;
     color: white;
     font-size: 18px;
+    /* padding: 5px; */
 }
 
 .nav-links a:hover {
-    border-bottom: 3px solid white;
-    transition: ease 100ms;
+    border-bottom: 2px solid white;
+    transition: 100ms;
 }
-/* ------------------------------ */
-/* DESKTOP DROPDOWN FIXED POSITION */
-/* ------------------------------ */
 
-/* Make dropdown relative to the parent <li> */
-.dropdown {
+/* Dropdowns */
+.dropdown, .dropdown2 {
     position: relative;
+    list-style: none;
 }
 
-/* Dropdown menu appears exactly under the button */
-.dropdown-menu {
+.dropdown-menu, .dropdown-menu2 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
     list-style: none;
     background: #444;
-    position: absolute;
-    top: 100%;         /* directly below Categories */
-    left: 0;           /* aligned properly */
-    display: none;
-    min-width: 180px;
     border-radius: 5px;
-    z-index: 20;
     padding-left: 5px;
+    z-index: 20;
 }
 
-/* On hover show dropdown */
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu,
+.dropdown2:hover .dropdown-menu2 {
     display: block;
 }
 
-/* ---------- Submenu (Men/Women) ---------- */
+/* Submenus */
 .sub-dropdown {
     position: relative;
-    padding-left: 10px;
 }
 
 .sub-menu {
-    list-style: none;
-    background: #666;
-    position: absolute;
-    top: 0;
-    left: 100%;       /* submenu appears to the right */
     display: none;
+    position: absolute;
+    list-style: none;
+    top: 0;
+    left: 100%;
     min-width: 180px;
+    background: #666;
     padding-left: 10px;
     border-radius: 5px;
 }
@@ -106,58 +101,42 @@ body {
 .sub-dropdown:hover .sub-menu {
     display: block;
 }
-/* Brands Dropdown */
-.dropdown2 {
-    position: relative;
-    list-style: none;
-}
-.dropdown2 .dropdown-toggle {
-    text-decoration: none;
-    display: block;
-    color: white;
-    cursor: pointer;
-    font-size: 18px;
-}
 
-/* Menu hidden by default */
-.dropdown-menu2 {
+/* Hamburger for mobile */
+#hamburger {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #444;
-    min-width: 180px;
-    list-style: none;
-    z-index: 1000;
-    border-radius: 5px;
-    padding-left: 5px;
-}
-/* Show menu on hover */
-.dropdown2:hover .dropdown-menu2 {
-    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
 }
 
-/* ----------------------------- */
-/* ----------------------------- */
-/* Gallery Section */
-/* ----------------------------- */
+/* --------- Categories Section --------- */
 .category-container {
     display: grid;
     gap: 20px;
     padding: 30px;
-    background-color: #111; /* dark background */
-    
-    /* Default for desktop */
+    background-color: black;
     grid-template-columns: repeat(3, 1fr);
 }
-.categories h2{
+
+.categories {
+    grid-column: 1 / -1;
     color: white;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
 }
+
+.category-box {
+    position: relative;
+    overflow: hidden;
+}
+
 .category-box img {
     width: 100%;
-    height: 230px;
-    display: block;
+    height: 250px;
     border-radius: 8px;
+    display: block;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -166,18 +145,188 @@ body {
     box-shadow: 0 5px 15px rgba(255,255,255,0.3);
 }
 
-/* Tablet: 2 columns */
+/* Overlay text */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+    pointer-events: none;
+}
+
+.category-box:hover .overlay-text {
+    opacity: 1;
+}
+
+/* --------- Responsive --------- */
 @media (max-width: 992px) {
     .category-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Mobile: 1 column */
 @media (max-width: 768px) {
+
+    /* Categories grid 1 column */
     .category-container {
         grid-template-columns: 1fr;
         padding: 20px;
     }
+
+    /* Hamburger visible */
+    #hamburger {
+        display: block;
+        color: white;
+    }
+
+    /* Nav links stacked vertically on right */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        width: 200px;
+        background: black;
+        margin: 0;
+        padding: 0;
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+        padding: 10px 15px;
+        border-bottom: 1px solid #333;
+        text-align: right;
+        list-style: none;
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        display: block;
+        text-align: right;
+        padding: 10px 0;
+    }
+
+    /* Reset dropdown menus on mobile */
+    .dropdown-menu, .dropdown-menu2, .sub-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        background: #222;
+        border-radius: 0;
+        padding-left: 0;
+        display: none; /* hidden by default on mobile */
+    }
+
+    .dropdown.open > .dropdown-menu,
+    .dropdown2.open > .dropdown-menu2,
+    .sub-dropdown.open > .sub-menu {
+        display: block; /* show on click */
+    }
+
+    /* Remove hover effect for mobile dropdown */
+    .dropdown:hover .dropdown-menu,
+    .dropdown2:hover .dropdown-menu2 {
+        display: none;
+    }
+}
+/* --------- Footer --------- */
+.site-footer {
+    background-color: #111;
+    color: white;
+    padding: 40px 20px 20px 20px;
+    font-size: 14px;
 }
 
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3, .footer-section h4 {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.footer-section p, .footer-section li, .footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    background: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-icon:hover {
+    background: #555;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    color: #777;
+}
+
+/* Responsive Footer */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
