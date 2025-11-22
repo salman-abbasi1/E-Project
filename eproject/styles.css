@@ -77,6 +77,7 @@ body {
     min-width: 180px;
     border-radius: 5px;
     z-index: 20;
+    padding-left: 5px;
 }
 
 /* On hover show dropdown */
@@ -99,9 +100,40 @@ body {
     display: none;
     min-width: 180px;
     padding-left: 10px;
+    border-radius: 5px;
 }
 
 .sub-dropdown:hover .sub-menu {
+    display: block;
+}
+/* Brands Dropdown */
+.dropdown2 {
+    position: relative;
+    list-style: none;
+}
+.dropdown2 .dropdown-toggle {
+    text-decoration: none;
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Menu hidden by default */
+.dropdown-menu2 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #444;
+    min-width: 180px;
+    list-style: none;
+    z-index: 1000;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+/* Show menu on hover */
+.dropdown2:hover .dropdown-menu2 {
     display: block;
 }
 
@@ -117,6 +149,9 @@ body {
     
     /* Default for desktop */
     grid-template-columns: repeat(3, 1fr);
+}
+.categories h2{
+    color: white;
 }
 .category-box img {
     width: 100%;
