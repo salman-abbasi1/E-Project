@@ -1,0 +1,178 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+/* --------- Navbar --------- */
+.nav {
+    width: 100%;
+    height: 75px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* Logo */
+.main-logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.sub-logo {
+    display: block;
+    font-size: 15px;
+    font-style: italic;
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid white;
+    transition: 100ms;
+}
+
+/* Dropdowns */
+.dropdown, .dropdown2 {
+    position: relative;
+    list-style: none;
+}
+
+.dropdown-menu, .dropdown-menu2 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    list-style: none;
+    background: black;
+    border-radius: 5px;
+    padding-left: 5px;
+    z-index: 20;
+    line-height: 30px;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown2:hover .dropdown-menu2 {
+    display: block;
+}
+
+/* Submenus */
+.sub-dropdown {
+    position: relative;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    list-style: none;
+    top: 0;
+    left: 100%;
+    min-width: 180px;
+    background: black;
+    padding-left: 10px;
+    border-radius: 5px;
+    line-height: 30px;
+}
+
+.sub-dropdown:hover .sub-menu {
+    display: block;
+}
+
+/* Hamburger for mobile */
+#hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+@media (max-width: 768px) {
+    /* Hamburger visible */
+    #hamburger {
+        display: block;
+        color: white;
+    }
+
+    /* Nav links stacked vertically on right */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        width: 200px;
+        background: black;
+        margin: 0;
+        padding: 0;
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+        padding: 10px 15px;
+        border-bottom: 1px solid #333;
+        text-align: right;
+        list-style: none;
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        display: block;
+        text-align: right;
+        padding: 10px 0;
+    }
+
+    /* Reset dropdown menus on mobile */
+    .dropdown-menu, .dropdown-menu2, .sub-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        background: #222;
+        border-radius: 0;
+        padding-left: 0;
+        display: none; /* hidden by default on mobile */
+    }
+
+    .dropdown.open > .dropdown-menu,
+    .dropdown2.open > .dropdown-menu2,
+    .sub-dropdown.open > .sub-menu {
+        display: block; /* show on click */
+    }
+
+    /* Remove hover effect for mobile dropdown */
+    .dropdown:hover .dropdown-menu,
+    .dropdown2:hover .dropdown-menu2 {
+        display: none;
+    }
+}
