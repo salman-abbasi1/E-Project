@@ -43,6 +43,9 @@ body {
     list-style: none;
     gap: 30px;
     flex-wrap: wrap;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .nav-links a {

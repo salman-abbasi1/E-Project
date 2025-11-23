@@ -25,24 +25,29 @@ document.addEventListener('click', (e) => {
     }
 });
 // Slider JS
-let slideIndex = 0;
-showSlides();
 
-function showSlides() {
-    let slides = document.getElementsByClassName("slide");
+let index = 0;                 // current slide (0 or 1)
+const wrapper = document.getElementById("slidesWrapper");
 
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    slideIndex++;
-
-    if (slideIndex > slides.length) { slideIndex = 1; }
-
-    slides[slideIndex - 1].style.display = "block";
-
-    setTimeout(showSlides, 3000);
+function showSlide() {
+    wrapper.style.transform = `translateX(-${index * 100}%)`;
 }
+
+function nextSlide() {
+    index = (index + 1) % 2;   // 2 slides
+    showSlide();
+}
+
+function prevSlide() {
+    index = (index - 1 + 2) % 2;
+    showSlide();
+}
+
+// Auto slide every 4 seconds
+setInterval(nextSlide, 4000);
+
+// Initialize
+showSlide();
 // Footer JS
 
 // Dynamically set current year in footer

@@ -25,7 +25,7 @@
         <ul id="navLinks" class="nav-links">
             <!-- Collection Dropdown -->
             <li class="dropdown">
-                <a href="index.html">Collection</a>
+                Collection
                 <ul class="dropdown-menu">
                     <li class="sub-dropdown">
                         <a href="#">Women</a>
@@ -54,7 +54,7 @@
 
             <!-- Brands Dropdown -->
             <li class="dropdown2">
-                <a href="#" class="dropdown-toggle">Brands</a>
+                Brands
                 <ul class="dropdown-menu2">
                     <li><a href="#">Tourister</a></li>
                     <li><a href="#">Chanel</a></li>
@@ -63,7 +63,7 @@
             </li>
 
             <!-- Other Nav Links -->
-            <li><a href="#">Sale</a></li>
+            <li><a href="index.html">Sale</a></li>
             <li><a href="about-us.html">About Us</a></li>
             <li><a href="contact-us.html">Contact us</a></li>
             <li><a href="sitemap.html">Site Map</a></li>
@@ -73,21 +73,22 @@
         </ul>
     </nav>
 </header>
-<!-- Image Slider -->
 <section class="slider">
-    <div class="slides">
+    <div class="slides-wrapper" id="slidesWrapper">
 
-        <!-- Slide 1 -->
-        <div class="slide fade">
-            <img src="banner.webp" alt="Slider Image 1">
+        <div class="slide">
+            <img src="bags-web-banner.webp" alt="">
         </div>
 
-        <!-- Slide 2 -->
-        <div class="slide fade">
-            <img src="banner2.webp" alt="Slider Image 2">
+        <div class="slide">
+            <img src="banner2.webp" alt="">
         </div>
 
     </div>
+
+    <!-- Arrows -->
+    <div class="arrow prev" onclick="prevSlide()">&#10094;</div>
+    <div class="arrow next" onclick="nextSlide()">&#10095;</div>
 </section>
 
 <!-- Categories Section -->
@@ -119,6 +120,73 @@
         <div class="overlay-text">Travel Bag</div>
     </div>
 </section>
+<!-- Kids Bags Section -->
+<section class="kids-section">
+    <h2 class="kids-heading"><span class="long-dash"></span> Kids Bags <span class="long-dash"></span></h2>
+
+    <div class="kids-container">
+        <!-- Row 1 -->
+        <div class="row">
+            <div class="kids-card">
+                <img src="sports-bag.webp" alt="Kids Bag 1">
+                <h3>Sports Bag</h3>
+                <p>Lightweight Sports Backpack</p>
+                <p class="specs">
+                    Color: 
+                    <span class="color-circle-half" title="Blue/White"></span>
+                </p>
+
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="kids-card">
+                <img src="school-bag.jpg" alt="Kids Bag 2">
+                <h3>School Bag</h3>
+                <p>School Backpack for Women</p>
+                    <p class="specs">
+                    Color: 
+                    <span class="color-circle" title="Pink"></span>
+                </p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="kids-card">
+                <img src="5pcs-set.webp" alt="Kids Bag 3">
+                <h3>5-Pcs Set</h3>
+                <p>5 Pcs Set for Girls</p>
+                       <p class="specs">
+                    Color: 
+                    <span class="color-circle2" title="Dark-pink"></span>
+                </p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row">
+            <div class="kids-card">
+                <img src="adventure-bag.webp" alt="Kids Bag 4">
+                <h3>Adventure Bag</h3>
+                <p>School Adventure Bag</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="kids-card">
+                <img src="kids5.jpg" alt="Kids Bag 5">
+                <h3>Kids Bag 5</h3>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="kids-card">
+                <img src="kids6.jpg" alt="Kids Bag 6">
+                <h3>Kids Bag 6</h3>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shop More Button -->
+    <div class="shop-more-container">
+        <a href="#" class="shop-more-btn">Shop More</a>
+    </div>
+</section>
+
 <!-- Footer -->
 <footer class="site-footer">
     <div class="footer-container">
