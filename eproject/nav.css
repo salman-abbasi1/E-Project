@@ -41,7 +41,7 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
@@ -161,13 +161,13 @@ body {
         background: #222;
         border-radius: 0;
         padding-left: 0;
-        display: none; /* hidden by default on mobile */
+        display: none;
     }
 
     .dropdown.open > .dropdown-menu,
     .dropdown2.open > .dropdown-menu2,
     .sub-dropdown.open > .sub-menu {
-        display: block; /* show on click */
+        display: block;
     }
 
     /* Remove hover effect for mobile dropdown */

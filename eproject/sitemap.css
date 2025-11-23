@@ -1,0 +1,76 @@
+/* sitemap.css — beautiful and modern */
+
+body{
+    font-family: "Poppins", sans-serif;
+    background: black;
+    margin:0;
+    padding:0;
+}
+
+.sitemap-wrapper{
+    max-width:1200px;
+    margin:50px auto;
+    text-align:center;
+    padding:20px;
+}
+
+h1{
+    font-size:36px;
+    color: white;
+    letter-spacing:1px;
+}
+
+.intro{
+    color: whitesmoke;
+    font-size:17px;
+    margin-bottom:40px;
+}
+
+.sitemap-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:25px;
+}
+
+.sitemap-card{
+    background:#ffffff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+    transition:0.3s ease;
+    text-align:left;
+    animation: fadeIn 0.6s ease;
+    border-left:6px solid #6c63ff;
+}
+
+.sitemap-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.15);
+}
+
+.sitemap-card h2{
+    margin-bottom:15px;
+    color:#333;
+    font-size:23px;
+}
+
+.sitemap-card a{
+    display:block;
+    margin:8px 0;
+    color:#555;
+    font-size:16px;
+    text-decoration:none;
+    padding-left:5px;
+    transition:0.2s;
+}
+
+.sitemap-card a:hover{
+    color:#6c63ff;
+    padding-left:10px;
+    font-weight:600;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+}
