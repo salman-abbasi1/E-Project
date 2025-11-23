@@ -24,6 +24,27 @@ document.addEventListener('click', (e) => {
         dropdowns.forEach(d => d.classList.remove('open'));
     }
 });
+// Slider JS
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+
+    if (slideIndex > slides.length) { slideIndex = 1; }
+
+    slides[slideIndex - 1].style.display = "block";
+
+    setTimeout(showSlides, 3000);
+}
+// Footer JS
+
 // Dynamically set current year in footer
 const yearSpan = document.getElementById('year');
 if(yearSpan) {
