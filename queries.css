@@ -1,35 +1,14 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background: #111;
-    color: white;
-    display: flex;
-    justify-content: center;
-    padding: 40px 20px;
-}
-
-.container {
-    max-width: 800px;
-    width: 100%;
-}
-
 h1 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 2.5rem;
-    color: #00d9ff;
+    color: white;
 }
 
 .faq-box {
-    background: #1a1a1a;
+    background: black;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
 }
 
 .faq-item {
@@ -39,10 +18,10 @@ h1 {
 .faq-question {
     width: 100%;
     padding: 15px;
-    text-align: left;
-    background: #222;
+    text-align: center;
+    background: white;
     border: none;
-    color: white;
+    color: black;
     font-size: 1.1rem;
     border-radius: 10px;
     cursor: pointer;
@@ -54,6 +33,7 @@ h1 {
 }
 
 .faq-answer {
+    text-align: center;
     max-height: 0;
     overflow: hidden;
     background: #333;
