@@ -1,3 +1,4 @@
+// Gallery JS
 const items = document.querySelectorAll(".item");
 
 items.forEach((item, i) => {

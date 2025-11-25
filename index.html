@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - BAG BAG</title>
+<link rel="stylesheet" href="nav.css">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header>
+    <nav class="nav">
+        <!-- Logo -->
+        <div class="main-logo">
+            <a href="index.html">BAG BAG
+                <span class="sub-logo">-Your everyday carry-</span>
+            </a>
+        </div>
+        <!-- Hamburger Button -->
+        <div id="hamburger">☰</div>
+
+        <!-- Nav Links Wrapper -->
+        <ul id="navLinks" class="nav-links">
+            <!-- Collection Dropdown -->
+            <li class="dropdown">
+                Collection
+                <ul class="dropdown-menu">
+                    <li class="sub-dropdown">
+                        <a href="#">Women</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Hand-bags</a></li>
+                            <li><a href="#">Backpacks</a></li>
+                            <li><a href="#">Tote bags</a></li>
+                            <li><a href="#">Sling bags</a></li>
+                            <li><a href="#">Clutches</a></li>
+                            <li><a href="#">All</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-dropdown">
+                        <a href="#">Men</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Backpacks</a></li>
+                            <li><a href="#">Messenger Bag</a></li>
+                            <li><a href="#">All</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Laptop Bags</a></li>
+                    <li><a href="#">Kids Bags</a></li>
+                    <li><a href="#">Traveling Bags</a></li>
+                </ul>
+            </li>
+
+            <!-- Brands Dropdown -->
+            <li class="dropdown2">
+                Brands
+                <ul class="dropdown-menu2">
+                    <li><a href="#">Tourister</a></li>
+                    <li><a href="#">Chanel</a></li>
+                    <li><a href="#">Gucci</a></li>
+                </ul>
+            </li>
+
+            <!-- Other Nav Links -->
+            <li><a href="index.html">Sale</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact us</a></li>
+            <li><a href="sitemap.html">Site Map</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Queries</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="slider">
+    <div class="slides-wrapper" id="slidesWrapper">
+
+        <div class="slide">
+            <img src="bags-web-banner.webp" alt="">
+        </div>
+
+        <div class="slide">
+            <img src="banner2.webp" alt="">
+        </div>
+
+    </div>
+
+    <!-- Arrows -->
+    <div class="arrow prev" onclick="prevSlide()">&#10094;</div>
+    <div class="arrow next" onclick="nextSlide()">&#10095;</div>
+</section>
+
+<!-- Categories Section -->
+<section class="category-container">
+    <h2 class="categories">Shop by Categories</h2>
+
+    <div class="category-box">
+        <img src="backpack.jpg" alt="Backpack">
+        <div class="overlay-text">Backpack</div>
+    </div>
+    <div class="category-box">
+        <img src="tote-bag.jpg" alt="Tote Bag">
+        <div class="overlay-text">Tote Bag</div>
+    </div>
+    <div class="category-box">
+        <img src="laptop bag.avif" alt="Laptop Bag">
+        <div class="overlay-text">Laptop Bag</div>
+    </div>
+    <div class="category-box">
+        <img src="purse.avif" alt="Purse">
+        <div class="overlay-text">Purse</div>
+    </div>
+    <div class="category-box">
+        <img src="clutch bags.jpg" alt="Clutch">
+        <div class="overlay-text">Clutch</div>
+    </div>
+    <div class="category-box">
+        <img src="travel-bag.webp" alt="Travel Bag">
+        <div class="overlay-text">Travel Bag</div>
+    </div>
+</section>
+<!-- Kids Bags Section -->
+<section class="kids-section">
+    <h2 class="kids-heading"><span class="long-dash"></span> Kids Bags <span class="long-dash"></span></h2>
+
+    <div class="kids-container">
+        <!-- Row 1 -->
+        <div class="row">
+            <div class="kids-card">
+                <img src="sports-bag.webp" alt="Kids Bag 1">
+                <h3>Sports Bag</h3>
+                <p>Lightweight Sports Backpack</p>
+                <p class="specs">
+                    Color: 
+                    <span class="color-circle-half" title="Blue/White"></span>
+                </p>
+
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="kids-card">
+                <img src="school-bag.jpg" alt="Kids Bag 2">
+                <h3>School Bag</h3>
+                <p>School Backpack for Girls</p>
+                    <p class="specs">
+                    Color: 
+                    <span class="color-circle" title="Pink"></span>
+                </p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="kids-card">
+                <img src="5pcs-set.webp" alt="Kids Bag 3">
+                <h3>5-Pcs Set</h3>
+                <p>5 Pcs Set for Girls</p>
+                       <p class="specs">
+                    Color: 
+                    <span class="color-circle2" title="Dark-pink"></span>
+                </p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row">
+            <div class="kids-card">
+                <img src="kitty-bag.webp" alt="Kids Bag 5">
+                <h3>Hello Kitty Bag</h3>
+                <p>Hello Kitty Cartoon Kids Bagpack</p>
+                <p class="specs">
+                    Color: 
+                    <span class="color-circle" title="Pink"></span>
+                </p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="kids-card">
+                <img src="adventure-bag.webp" alt="Kids Bag 4">
+                <h3>Adventure Bag</h3>
+                <p>School Adventure Bag</p>
+                   <p class="specs">
+                    Color: 
+                    <span class="color-circle-half2" title="Dark-pink"></span>
+                </p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="kids-card">
+                <img src="stylish-bag.webp" alt="Kids Bag 6">
+                <h3>Stylish Backpack</h3>
+                <p>Stylish Kids Backpack with Gradient Design</p>
+                <p class="specs">
+                    Color: 
+                    <span class="color-circle3" title="Grey"></span>
+                </p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shop More Button -->
+    <div class="shop-more-container">
+        <a href="#" class="shop-more-btn">Shop More</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-section about">
+            <h3>BAG BAG</h3>
+            <p>Your everyday carry – stylish and functional bags for every occasion.</p>
+        </div>
+
+        <div class="footer-section links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Collection</a></li>
+                <li><a href="#">Brands</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h4>Contact Us</h4>
+            <p>Email: info@bagbag.com</p>
+            <p>+92 123 222-3333-44</p>
+            <p>Address: Karachi,Pakistan</p>
+        </div>
+
+        <div class="footer-section social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#" class="social-icon">FB</a>
+                <a href="#" class="social-icon">IG</a>
+                <a href="#" class="social-icon">TW</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> BAG BAG. All Rights Reserved.</p>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
