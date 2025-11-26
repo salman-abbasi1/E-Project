@@ -179,3 +179,52 @@ body {
         display: none;
     }
 }
+/* Floating Feedback  */
+.feedback-btn {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #000;
+    color: #fff;
+    padding: 12px 18px;
+    writing-mode: vertical-rl;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px 0 0 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    z-index: 999999;
+}
+.feedback-btn:hover {
+    background: #333;
+    padding-right: 25px;
+}
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+    .feedback-btn {
+        font-size: 14px;
+        padding: 10px 14px;
+        border-radius: 6px 0 0 6px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .feedback-btn {
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+        transform: none;
+        writing-mode: horizontal-tb;
+        padding: 10px 16px;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    .feedback-btn:hover {
+        padding-right: 16px;
+    }
+}
