@@ -33,24 +33,22 @@ h1{
 }
 
 .sitemap-card{
-    background:#ffffff;
+    background:white;
     padding:25px;
     border-radius:18px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.1);
     transition:0.3s ease;
     text-align:left;
     animation: fadeIn 0.6s ease;
-    border-left:6px solid #6c63ff;
+    border-left:6px solid darkcyan; 
 }
 
 .sitemap-card:hover{
     transform:translateY(-6px);
-    box-shadow:0 12px 30px rgba(0,0,0,0.15);
 }
 
 .sitemap-card h2{
     margin-bottom:15px;
-    color:#333;
+    color: #333;
     font-size:23px;
 }
 
@@ -65,7 +63,7 @@ h1{
 }
 
 .sitemap-card a:hover{
-    color:#6c63ff;
+    color: darkcyan;
     padding-left:10px;
     font-weight:600;
 }
