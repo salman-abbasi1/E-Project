@@ -105,7 +105,9 @@ body {
 .sub-dropdown:hover .sub-menu {
     display: block;
 }
-
+.nav-feedback{
+    display: none;
+}
 /* Hamburger for mobile */
 #hamburger {
     display: none;
@@ -119,7 +121,9 @@ body {
         display: block;
         color: white;
     }
-
+    .nav-feedback{
+        display: block;
+    }
     /* Nav links stacked vertically on right */
     .nav-links {
         display: none;
@@ -172,7 +176,9 @@ body {
     .sub-dropdown.open > .sub-menu {
         display: block;
     }
-
+    .feedback-btn{
+        display: none;
+    }
     /* Remove hover effect for mobile dropdown */
     .dropdown:hover .dropdown-menu,
     .dropdown2:hover .dropdown-menu2 {
@@ -185,8 +191,8 @@ body {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    background: #000;
-    color: #fff;
+    background: black;
+    color: white;
     padding: 12px 18px;
     writing-mode: vertical-rl;
     font-weight: bold;

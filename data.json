@@ -1,0 +1,51 @@
+[
+{
+    "p_image" : "travelbag1.webp",
+    "p_name" : "Delsey SuperLite",
+    "p_description" : "The Delsey Super Lite 2.0 collection is built for travelers who want ultra-light convenience without compromising durability.",
+    "p_price" : "Rs.9500"
+},
+{
+    "p_image" : "travelbag2.webp",
+    "p_name" : "Delsey ChateLet",
+    "p_description" : "The Delsey CHATELET AIR 2.0 is the perfect fusion of elegance, durability, and French craftsmanship. Inspired by Parisian architecture.",
+    "p_price" : "Rs.9500"
+},
+{
+    "p_image" : "travelbag3.webp",
+    "p_name" : "Travel CrossLite",
+    "p_description" : "The Travelite Crosslite is a versatile trolley series that blends compact design, smart functionality, and reliable durability.Crafted from high strength",
+    "p_price" : "Rs.9500"
+},
+{
+    "p_image" : "travelbag4.webp",
+    "p_name" : "Duffel Bag",
+    "p_description" : "Upgrade your travel game with our versatile travel duffel bags for men and women. Stylish, our duffel bags are your perfect travel companions.",
+    "p_price" : "Rs.5000"
+},
+{
+    "p_image" : "travelbag5.webp",
+    "p_name" : "Grey Goby London",
+    "p_description" : "Grey travel suitcase with a smooth, fabric exterior.It features a sturdy telescopic handle and easy-rolling 360° spinner wheels.",
+    "p_price" : "Rs.7500"
+},
+{
+    "p_image" : "travelbag6.webp",
+    "p_name" : "Versage Swansea",
+    "p_description" : "Whether it’s a week-long getaway or a long-distance journey, the Verage Swansea is built to handle it all. Crafted from high-strength. ",
+    "p_price" : "Rs.9500"
+},
+{
+    "p_image" : "travelbag7.webp",
+    "p_name" : "Lusetti Signature",
+    "p_description" : "The Lusetti Signature Collection redefines travel with its unbreakable 100% polycarbonate shell, ensuring durability and lightweight performance.",
+    "p_price" : "Rs.15000"
+},
+{
+    "p_image" : "travelbag8.webp",
+    "p_name" : "Samsonite Winfield",
+    "p_description" : "Tough and light, Winfield 3 DLX is the latest generation of one of Samsonite’s most popular collections. This deluxe iteration has been upgraded.",
+    "p_price" : "Rs.13000"
+}
+
+]
